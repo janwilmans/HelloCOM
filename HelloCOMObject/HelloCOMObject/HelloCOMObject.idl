@@ -1,0 +1,31 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(5889CB3A-D764-4651-9A6D-76E7A322F323),
+	version(1.0),
+]
+library HelloCOMObjectLib
+{
+	importlib("stdole2.tlb");
+
+[
+    object,
+    uuid(3DB803EF-2720-486A-8FA6-D5BDD598F593),
+    oleautomation
+]
+interface IHello : IUnknown
+{
+    HRESULT greet();
+};
+
+[
+    uuid(5A119466-99B2-4BA3-8F28-BF4D7BE986D2)
+]
+coclass HelloObject
+{
+    [default] interface IHello;
+};
+
+};
+

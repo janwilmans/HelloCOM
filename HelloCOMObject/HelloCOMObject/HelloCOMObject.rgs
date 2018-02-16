@@ -1,0 +1,26 @@
+HKCR
+{
+	HelloCOMObject.1 = s 'HelloCOMObject Class'
+	{
+		CLSID = s '{5A119466-99B2-4BA3-8F28-BF4D7BE986D2}'
+	}
+	HelloCOMObject = s 'HelloCOMObject Class'
+	{
+		CurVer = s 'HelloCOMObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5A119466-99B2-4BA3-8F28-BF4D7BE986D2} = s 'HelloCOMObject Class'
+		{
+			ProgID = s 'HelloCOMObject.1'
+			VersionIndependentProgID = s 'HelloCOMObject'
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{5889CB3A-D764-4651-9A6D-76E7A322F323}'
+		}
+	}
+}
